@@ -230,7 +230,7 @@ export default class DataBelumDisetujui extends Component {
                     loading={this.state.loading}/>
                 <StatusBar translucent backgroundColor="rgba(0,0,0,0.4)"/>
                 <Header
-                    backgroundColor='#e52d27'
+                    backgroundColor='#ad6cd9'
                     containerStyle={{
                         height: 80
                     }}

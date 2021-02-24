@@ -97,49 +97,8 @@ export default App = ({navigation}) => {
     const authContextValue = useMemo(
         () => ({
             signIn: async (data) => {
-                if (
-                    data &&
-                    data.username !== undefined &&
-                    data.password !== undefined
-                ) {
-
-                    return fetch(baseApi + 'login', {
-                        method: 'POST',
-                        headers: {
-                            Accept: 'application/json',
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            username: data.username,
-                            password: data.password
-                        })
-                    })
-                        .then((response) => response.json())
-                        .then((json) => {
-
-                            if (json.status === true) {
-                                console.log(json.token)
-
-                                dispatch({type: 'SIGN_IN', token: json.token, id_kab: json.id_kab});
-                                 AsyncStorage.setItem('token',json.token)
-                                AsyncStorage.setItem('id_kab',json.id_kab)
-                                // this.setState({
-                                //     loading: false
-                                // });
-
-                            } else {
-                                alert(json.message)
-                                // this.setState({
-                                //     password: '',
-                                //     loading: false
-                                // })
-                            }
-                        })
-                        .catch((error) => {
-                            console.error(error);
-                            alert('Anda sedang tidak terhubung ke jaringan internet')
-                        });
-
+                if(data.masuk === true){
+                    dispatch({type: 'SIGN_IN', token: data.token, id_kab: data.id_kab});
 
                 } else {
                     dispatch({type: 'TO_SIGNIN_PAGE'});
