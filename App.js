@@ -121,7 +121,8 @@ export default App = ({navigation}) => {
                                 console.log(json.token)
 
                                 dispatch({type: 'SIGN_IN', token: json.token, id_kab: json.id_kab});
-
+                                 AsyncStorage.setItem('token',json.token)
+                                AsyncStorage.setItem('id_kab',json.id_kab)
                                 // this.setState({
                                 //     loading: false
                                 // });
