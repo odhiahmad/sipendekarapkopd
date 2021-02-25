@@ -97,7 +97,7 @@ export default class DataBelumDisetujuiDetail extends Component {
             });
 
     }
-    tindakLanjuti = () => {
+       tindakLanjuti = () => {
         Alert.alert(
             "Pesan",
             "Apakah anda yakin ingin menindak lanjuti pengaduan ini ?",

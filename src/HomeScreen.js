@@ -14,27 +14,7 @@ export default function HomeScreen({navigation}) {
                 source={require("./images/back.png")}
                 style={{width: "100%", height: "100%"}}
             >
-                {/*<View*/}
-                {/*    style={{*/}
-                {/*        flexDirection: "row",*/}
-                {/*        marginTop: 40,*/}
-                {/*        alignItems: "center",*/}
-                {/*        paddingHorizontal: 10,*/}
-                {/*    }}*/}
-                {/*>*/}
-                {/*    /!*<Icon name="menu" size={30} color="#a2a2db" style={{width: 20}}/>*!/*/}
-                {/*    <Icon*/}
-                {/*        type="font-awesome-5"*/}
-                {/*        name="sign-out-alt"*/}
-                {/*        size={33}*/}
-                {/*        color="#ff5c83"*/}
-                {/*        style={{marginLeft: 280}}*/}
-                {/*    />*/}
-                {/*    <Text   style={{*/}
-                {/*        fontSize: 16,*/}
-                {/*        color: "gray"*/}
-                {/*    }}> Keluar</Text>*/}
-                {/*</View>*/}
+               
 
                 <View style={{paddingHorizontal: 40, marginTop: 80}}>
                     <Text
@@ -77,11 +57,7 @@ export default function HomeScreen({navigation}) {
                     {/*    />*/}
                     {/*</View>*/}
 
-                    <ScrollView
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                        style={{marginLeft: -10, marginTop: 330}}
-                    >
+                    <View style={{flexDirection: "row", marginTop: 350}}>
                         <TouchableOpacity
                             onPress={() => navigation.navigate("DataBelumDisetujui")}
                             style={{
@@ -89,7 +65,7 @@ export default function HomeScreen({navigation}) {
                                 justifyContent: "center",
                                 height: 100,
                                 width: 120,
-                                backgroundColor: "white",
+
                             }}>
                             <View
 
@@ -119,7 +95,7 @@ export default function HomeScreen({navigation}) {
                                 justifyContent: "center",
                                 height: 100,
                                 width: 120,
-                                backgroundColor: "white",
+
                             }}>
                             <View
 
@@ -151,7 +127,7 @@ export default function HomeScreen({navigation}) {
                             justifyContent: "center",
                             height: 100,
                             width: 120,
-                            backgroundColor: "white",
+
                         }}>
                             <View
                                 style={{
@@ -176,7 +152,7 @@ export default function HomeScreen({navigation}) {
                         </TouchableOpacity>
 
 
-                    </ScrollView>
+                    </View>
 
 
                 </View>
